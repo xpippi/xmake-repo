@@ -65,7 +65,7 @@ package("libsdl_gfx")
         os.cp(path.join(build_dir, "*.dll"), package:installdir("bin"))
         os.cp("*.h", package:installdir("include", "SDL2"))
     end)
-
+ 
     on_install("macosx", "linux", function (package)
         local configs = {}
         if package:config("shared") then
